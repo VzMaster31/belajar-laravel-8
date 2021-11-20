@@ -7,7 +7,10 @@
                 <h2>
                     <a href="/posts/{{ $post->slug }}" class="text-decoration-none">{{ $post->title }}</a>
                 </h2>
-                <p>by. Sandhika Galih in <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
+                <p>
+                    by. <a href="/author/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in
+                    <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a>
+                </p>
                 <p>{{ $post->excerpt }}</p>
 
                 <a href="/posts/{{ $post->slug }}" class="text-decoration-none">Read More..</a>
